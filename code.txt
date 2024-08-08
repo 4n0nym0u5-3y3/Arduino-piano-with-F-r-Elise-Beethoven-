@@ -1,0 +1,215 @@
+int but1 = 3;
+int but2 = 4;
+int but3 = 5;
+int but4 = 6;
+int but5 = 7;
+int but6 = 8;
+int but7 = 9;
+int but8 = 2;
+int but_p = 10;
+
+int buzzer = 13;
+
+void setup()
+{
+  Serial.begin(9600);
+  
+  pinMode(but1,INPUT);
+  pinMode(but1, OUTPUT);
+  pinMode(but2,INPUT);
+  pinMode(but3,INPUT);
+  pinMode(but4,INPUT);
+  pinMode(but5,INPUT);
+  pinMode(but6,INPUT);
+  pinMode(but7,INPUT);
+  pinMode(but8,INPUT);
+  pinMode(but_p, INPUT);
+
+  pinMode(buzzer,OUTPUT);
+}
+
+void inizio(){
+    tone(buzzer, 659); //mi
+    delay(300);
+    tone(buzzer, 622);
+    delay(300);
+    tone(buzzer, 659);
+    delay(300);
+    tone(buzzer, 622);
+    delay(300);
+    tone(buzzer, 659);
+    delay(300);
+    tone(buzzer, 493); //si
+    delay(300);
+    tone(buzzer, 587);
+    delay(300);
+    tone(buzzer, 523);
+    delay(300);
+    tone(buzzer, 440);
+    delay(600);
+    tone(buzzer, 261); //do
+    delay(300);
+    tone(buzzer, 329);
+    delay(300);
+    tone(buzzer, 440);
+    delay(300);
+    tone(buzzer, 493);
+    delay(600);
+    tone(buzzer, 329); //mi
+    delay(300);
+    tone(buzzer, 415); //sol#
+    delay(300);
+    tone(buzzer, 493);
+    delay(300);
+    tone(buzzer, 523);
+    delay(600);
+    tone(buzzer, 329); //mi4
+    delay(300);
+    tone(buzzer, 659); //mi5
+    delay(300);
+    tone(buzzer, 622);
+    delay(300);
+    tone(buzzer, 659);
+    delay(300);
+    tone(buzzer, 622);
+    delay(300);
+    tone(buzzer, 659);
+    delay(300);
+    tone(buzzer, 493); //si
+    delay(300);
+    tone(buzzer, 587);
+    delay(300);
+    tone(buzzer, 523);
+    delay(300);
+    tone(buzzer, 440);
+    delay(600);
+    tone(buzzer, 261); //do
+    delay(300);
+    tone(buzzer, 329);
+    delay(300);
+    tone(buzzer, 440);
+    delay(300);
+    tone(buzzer, 493);
+    delay(600);
+    tone(buzzer, 329); //mi
+    delay(300);
+    tone(buzzer, 523);
+    delay(300);
+    tone(buzzer, 493);
+    delay(300);
+    tone(buzzer, 440);
+    delay(600);
+  }
+
+void loop()
+{
+  int b1 = digitalRead(but1);
+  int b2 = digitalRead(but2);
+  int b3 = digitalRead(but3);
+  int b4 = digitalRead(but4);
+  int b5 = digitalRead(but5);
+  int b6 = digitalRead(but6);
+  int b7 = digitalRead(but7);
+  int b8 = digitalRead(but8);
+  int b_p = digitalRead(but_p);
+ 
+  if(b1 == 1){
+    tone(buzzer, 261, 100);
+    digitalWrite(but1, HIGH);
+    digitalWrite(but1, LOW);
+  }
+  if(b2 == 1){
+    tone(buzzer, 293, 100);
+    digitalWrite(but2, HIGH);
+    digitalWrite(but2, LOW);
+  }
+  if(b3 == 1){
+    tone(buzzer, 329, 100);
+    digitalWrite(but3, HIGH);
+    digitalWrite(but3, LOW);
+  }
+  if(b4 == 1){
+    tone(buzzer, 349, 100);
+    digitalWrite(but4, HIGH);
+    digitalWrite(but4, LOW);
+  }
+  if(b5 == 1){
+    tone(buzzer, 392,100);
+    digitalWrite(but5, HIGH);
+    digitalWrite(but5, LOW);
+  }
+  if(b6 == 1){
+    tone(buzzer, 440,100);
+    digitalWrite(but6, HIGH);
+    digitalWrite(but6, LOW);
+  }
+  if(b7 == 1){
+    tone(buzzer, 493,100);
+    digitalWrite(but7, HIGH);
+    digitalWrite(but7, LOW);
+  }
+  if(b8 == 1){
+    tone(buzzer, 523,100);
+    digitalWrite(but8, HIGH);
+    digitalWrite(but8, LOW);
+  }
+  
+  if(b_p == HIGH){
+    inizio();
+    
+    tone(buzzer, 493); //si
+    delay(300);
+    tone(buzzer, 523);
+    delay(300);
+    tone(buzzer, 587);
+    delay(300);
+    tone(buzzer, 659);
+    delay(600);
+    
+    tone(buzzer, 392); //sol
+    delay(300);
+    tone(buzzer, 698);
+    delay(300);
+    tone(buzzer, 659);
+    delay(300);
+    tone(buzzer, 587);
+    delay(600);
+    
+    tone(buzzer, 349); //fa
+    delay(300);
+    tone(buzzer, 659);
+    delay(300);
+    tone(buzzer, 587);
+    delay(300);
+    tone(buzzer, 523);
+    delay(600);
+    
+    tone(buzzer, 329);//Mi
+    delay(300);
+    tone(buzzer, 587);
+    delay(300);
+    tone(buzzer, 523);
+    delay(300);
+    tone(buzzer, 493);
+    delay(600);
+    
+    tone(buzzer, 82);
+    delay(300);
+    tone(buzzer, 164);
+    delay(300);
+    tone(buzzer, 329);
+    delay(300);
+    tone(buzzer, 329);
+    delay(300);
+    tone(buzzer, 659);
+    delay(300);
+    tone(buzzer, 329);
+    delay(300);
+    tone(buzzer, 659);
+    delay(300);
+    tone(buzzer, 1319);
+    delay(300);
+    inizio();
+  }
+  delay(10);
+}
